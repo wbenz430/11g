@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>1212網頁試做</title>
+		
+	<style>
+		.{font-family:"微軟黑正體";}
+		body,h1,h2{
+			margin:0;
+			padding: 0;
+		}/貼齊網頁
+		.clearfix::after{
+			contenet:"";
+			display:block;
+			clear:both;
+		}
+		nav{ overflow:auto;
+			width:100%;
+			background-color:#9C6282;
+		}
+	.fixed-width{width:960px;
+				margin:auto;
+		}
+		nav .logo{
+			font-size:60px;
+			color:#fff;
+			height: 70px;
+			float: left;
+			line-height: 70px;
+		}
+		nav ul{
+			float: right;
+			
+
+		}
+		nav li{
+			list-style-type: none;
+			float: left;
+		} 
+		nav a{
+			display: block;
+			height:70px;
+			line-height: 70px;
+			color:#fff;
+			text-decoration: none;
+			padding-left: 20px;
+			/*transition: all .3s*/
+			transition:transform 1s,color 1s 5s ;
+				/改變1秒後顏色才變化1秒 停留5秒後變色
+
+
+
+
+		}
+		nav a:hover{
+			color:#5b67f9;
+			/*transform: rotate(360deg);/https://www.w3schools.com/cssref/css3_pr_transform.asp*/
+			/*transform:scale(1.5);*/
+			transform:translate(-10px,-10px);
+
+		}
+
+
+	</style> 
+</head>
+<body><nav class="clearfix">  /必要必要
+
+	<div class="fixed-width">
+		<div class="logo">logo</div>
+		<ul>
+			<li><a href="">Menu據點</a></li>
+			<li><a href="">Menu產品目錄</a></li>
+			<li><a href="">Menu</a></li>
+			<li><a href="">Menu</a></li>
+			<li><a href="">Menu聯絡方式</a></li>
+		</ul>
+	</div>
+</nav>
+	
+</body>
+</html>

@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>1213網頁建置Demo</title>
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<style>
+	@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+		@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+		*{font-family: roboto,"Noto Sans TC";}
+
+		body,h1,h2,h3,h4,h5,h6{
+			margin:0;
+			padding: 0;
+		}
+		.clearfix::after{
+			content:"";
+			display:block;
+			clear:both;
+		}
+		a{text-decoration:none;
+			color:#000;}
+		img{
+			width: 100%;
+		}
+		.fixed-width{
+			width: 1000px;
+			margin:auto;
+		}
+		.full-width{
+			width: 100%;
+		}
+		.col-2{
+			width: calc(50% - 30px);
+			float: left;
+			margin: 0 15px;
+		}
+		.col-3{
+			width: calc(100% / 3 - 30px);
+			float: left;
+			margin: 0 15px;
+		}
+		.col-4{
+			width: calc(100% / 4 - 30px);
+			float: left;
+			margin: 0 15px;
+		}
+
+		.wraper{width: 100%;
+				height: 100%;
+				background-image:url(cars-bridge-trees.jpg); 
+				background-repeat: no-repeat;
+				background-size:cover;
+				-webkit-background-size: cover;
+				background-position: center;
+ 				background-attachment: fixed;
+			}
+		nav{background-color: transparent;
+			position:fixed;}
+		nav .logo{
+			float: left;
+			height: 40px;
+			line-height: 40px;
+			color: #fff;
+			font-size: 25px;
+			border:3px solid #fff;
+			font-weight: 600;
+			margin-left:0px;
+			margin:25px 0; 
+			padding:10px 5px; 
+
+
+
+		}
+		nav .orange{
+			color:#CD3631;
+		}
+		nav ul{float: right;}
+		nav li{list-style-type:none;
+			float:left;  }
+			
+			nav a{
+			display: block;
+			height: 70px;
+			line-height: 70px;
+			color: #fff;
+			text-align: center;
+			padding-left: 15px;
+
+			}
+			header{
+				
+				padding:300px 0;
+			}
+			header .title{
+				text-align: center;
+			}
+			header h1{
+				font-size:50px;
+				color: #fff; 
+			}
+			header hr{width:300px;
+					background-color: #fff;
+			}
+			header h3{color: #fff;
+					font-style:italic;
+					font-size:24px;}
+
+			header .title a,.orangeblock .right a ,.welcome a, .store a, .col-3 a, 
+			.touch input[type="submit"]{
+					color:#DC0F0F;
+					display:block;
+					width: 120px;
+					height: 30px;
+					text-align: center;
+					font-size:20px;
+					line-height: 15px;
+					background-color:rgba(255,255,255,.5);
+					padding-top: 10px;
+					margin:auto;
+					margin-top: 50px;
+					border-radius: 5px;
+					
+}
+
+
+					
+					}
+       				header .title a:hover, .store a:hover{
+					background-color: #14ABEA;}
+				header .menu{
+					color: #fff;
+					margin-top: 50px;
+					text-align: center;
+		}
+				header .icon{
+					border-radius:50%;
+					border:1px solid #fff;
+					margin:10px;
+					padding:10px;
+ 
+				}
+				header .menu .col-3{
+				transition:all 0.9s;
+				padding: 15px;
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;
+		}
+		header .menu .col-3:hover{
+				background-color: rgba(0,0,0,0.5);
+		}
+		.orangeblock{
+			background-color: #5350AE;
+			height: 200px;
+			 line-height:200px;
+			
+		}
+		.orangeblock .left{
+			float: left;
+			color:#fff;
+			font-size: 14px;
+			margin:0px 20px;
+			
+		}
+		.orangeblock .right{
+			float: right;
+			margin:15px 30px;
+		}
+		.orangeblock .right a{
+			font-family:italic;
+			font-size:12px;
+			margin-top: 60px;
+			margin-left:50px;
+	}
+			.what{
+			text-align: center;
+		}
+		.what h2{
+			color: #fff;
+			margin: 30px 0 15px 0;
+			font-size: 36px;
+		}
+		.what h4{
+			color: #fff;
+			margin: 15px 0 30px 0;
+		}
+		.what .col-3{
+			background-color: #fff;
+			padding:10px;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			margin-top: 15px;
+			margin-bottom: 15px;
+
+		}
+		.what .col-3 h5{
+			margin: 5px 0;
+			color: rgba(0,0,0,0.8); 
+			font-size: 18px;
+		}
+		.what .col-3 p {
+			font-size: 12px;
+			color: rgba(0,0,0,0.7);
+		}
+		.what .icon_what{
+
+			width:50px;
+			height: 50px;
+			border-radius:50%;
+			background-color: #9ce7f4;
+
+			font-size: 20px;
+			line-height: 50px;
+			color: #14ABEA;
+			margin: auto;
+}
+			.what .col-3:hover .icon_what{
+				background-color:#CD31A5FF;
+				color: #566CA8;
+			}
+
+			.about{
+			background-color: #fff;
+			padding: 50px 0;
+		}
+
+		.about .h2{
+			font-size: 36px;
+		}
+		.about .col-2:nth-of-type(2){
+			padding: 30px;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;}
+		.welcome{
+			padding:50px;
+			text-align: center;
+			background-color:rgba(81,197,60,0.5)
+		}
+		.welcome p{
+			font-size: 24px;
+			font-weight: 600;
+		}
+
+		.welcome a , .store .col-3 a{
+			font-size: 16px;
+			background-color: #eee;
+			padding: 5px 10px;
+			color: #fff;
+
+
+		}
+
+		.fixed-width_600{
+			width: 600px;
+			margin: auto;
+		}
+
+
+
+		.team, .happy, {
+
+			padding:150px 0;
+			background-color: #fff;
+		}
+		.team h1 ,.store h1, .happy h1, .news h1 {
+			text-align: center;
+			font-size: 30px;
+			margin-bottom: 30px;
+			color:#fff;
+
+
+		}
+		.team h4,.store h4, .happy h4 ,.news h4{
+			text-align: center;
+			font-size: 20px;
+			margin-bottom: 40px;
+			color:#fff;
+		}
+		.team .col-4{
+			height: 400px;
+			background-repeat: no-repeat;
+			-webkit-background-size: cover;
+			background-size: cover;
+			position: relative;
+			overflow: hidden;
+
+;
+
+		}
+		.team .col-4::before{
+			content: "";
+			display: block;
+			width: 95%;
+			height: 100%;
+			background-color: rgba(255,255,255,0.5);
+			z-index: 1;	
+			transform:skewX(-30deg) translateX(-200px);
+			transition:all 0.3s;
+		}
+		.team .col-4:hover::before{
+			content:"";
+			transform:skewX(-30deg)translateX(-30px);}
+
+		.team .col-4:hover.name, .team .col-4:hover .desc,.team .col-4:hover .icon
+		{
+			opacity: 1;
+		}
+
+
+		
+
+		.team .col-4:nth-of-type(1){
+			background-image: url(nature-tree-natur-forest-trees.jpg);
+		}
+
+		.team .col-4:nth-of-type(2){
+			background-image: url(tree-mug-coffee.jpg);
+		}
+		.team .col-4:nth-of-type(3){
+			background-image: url(jorik-blom-366499.jpg);
+		}
+		.team .col-4:nth-of-type(4){
+			background-image: url(row-old-book-bookcase.jpg);
+		}
+		.team .job{
+			position: absolute;
+			bottom: 0;
+			padding-right:10px;
+			text-align: right;
+			color:#fff;
+			width: 100%;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+		.team .col-4:nth-of-type(1) .job{
+			background-color: #1E7;
+		}
+		.team .col-4:nth-of-type(2) .job{
+			background-color: #1E7;
+		}
+		.team .col-4:nth-of-type(3) .job{
+			background-color: #1E7;
+		}
+		.team .col-4:nth-of-type(4) .job{
+			background-color: #1E7;
+		}
+		.team .name,.team .desc,.team .icon{
+			position: absolute;
+			
+			left: 25px;
+			width: 150px;
+			top: 17%;
+			opacity: 0;
+			/*display: none;*/
+			transition:all 0.3s 0.2s;
+			z-index: 999;
+		}
+	
+
+		.team .name{
+			font-size: 20px;
+			color: #fff;
+			top:15%;
+		}
+
+		.team .desc{ top: 30%;
+			color: #fff;
+
+		}
+		.team .icon{
+			top: 60%;
+
+		}
+		.team .icon span{
+			display: inline-block;
+			width: 25px;
+			height: 25px;
+			border-radius: 50%;
+			background-color: #ff0000;
+			line-height: 25px;
+			text-align: center;
+			color:#fff;
+			cursor:pointer;
+
+		}
+		.team .col-4:nth-of-type(1) .icon span{
+			background-color: #F38181;
+		}
+		.team .col-4:nth-of-type(2) .icon span{
+			background-color: #FCE38A;
+		}
+		.team .col-4:nth-of-type(3) .icon span{
+			background-color: #38817A;
+		}
+		.team .col-4:nth-of-type(4) .icon span{
+			background-color: #95E1D3;
+		}
+			
+			
+
+
+			.store h1, .store h4{
+				color:#fff;
+			}
+			.store{
+				padding: 80px 0;}
+
+			.store .col-3{
+				height: 400px;
+				position:relative;
+				background-repeat: no-repeat;
+				-webkit-background-size: cover;
+				background-size: cover;
+				background-position: center;
+			
+				transition: all 0.3s;
+
+			}
+			.store .col-3:nth-of-type(1){
+				background-image: url(22302.jpg);
+
+			}
+			.store .col-3:nth-of-type(2){
+				background-image: url(22303.jpg);
+
+			}
+			.store .col-3:nth-of-type(3){
+				background-image: url(22304.jpg);
+
+			}
+
+			.store .col-3::before{
+				content:"";
+				width: 100%;
+				height: 100%;
+				background-color:rgba(0,0,0,0.5);
+				position: absolute;
+				opacity: 0;
+				transition: all 0.3s 0.5s;
+
+			}
+
+			.store .col-3:hover::before{
+			opacity: 0.5;}
+
+			.store .col-3:hover a,.store .col-3:hover .price{
+			opacity: 1;
+		}
+
+
+			.store .col-3 a{
+				position:absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					font-size:20px;
+					padding: 5px 5px;
+    				color:#fff;
+    				opacity:0.5;
+					margin: auto;
+					transition: all 0.3s;
+
+
+
+			}
+			.store .col-3 .price{
+				position: absolute;
+				top: 75%;
+				text-align: center;
+				width: 100%;
+				color: #fff;
+				text-shadow: 0 0 10px #000;
+				font-weight: 600;
+				transition: all 0.3s;
+
+
+			}
+
+			.store .col-3 .title{
+				position: absolute;
+				bottom:0;
+				text-align: center;
+				width: 100%;
+				color: #fff;
+			background-color: rgba(0,0,0,0.9);
+			padding: 5px;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+		.happy .col-3{
+
+				padding:15px;
+				background-color: #eee;
+				box-shadow: 1px 0 5px rgba(0,0,0,0.5);
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;
+				margin-bottom: 50px;
+				position: relative;
+
+
+
+		}
+			.happy .col-3 img{
+			display: block;
+			width: 81px;
+			height: 81px;
+			border-radius: 50%;
+			border:2px solid #fff;
+			box-shadow: 0 0 0 1px #F40;
+			position: relative;
+			margin: auto;
+			top: -50px;
+		}
+		.happy .col-3 p{
+			position: relative;
+			top: -40px;
+		}
+
+
+		.happy .quote{
+			position: absolute; /*給了絕對上面須給相對*/
+			top: 15px;
+			left: 15px;
+		}
+		.happy .quote {
+			font-size: 36px;
+			color: #f40;
+		}
+
+
+	.happy .quote span{
+			font-size: 36px;
+			color: #f40;
+		}
+
+		.happy .sign {
+			position: absolute;
+			right: 15px;
+			bottom: 15px;
+			font-size: 20px;
+			font-style: italic;
+			color: #f40;
+			/*font-weight: 600;粗體*/
+		}
+
+		.news {
+			padding:150px, 0;
+		}
+		.news .col-4{
+			margin: 0;
+			width: 25%;
+			height: 200px;
+			background-repeat: no-repeat;
+			-webkit-background-size: cover;
+			background-size: cover;
+			background-position: center;
+			position: relative;
+			color: #fff;
+			text-align: center;
+			overflow: hidden;
+
+		}
+		.news .col-4:nth-of-type(1){
+			background-image: url(LatestNews1.jpg);
+		}
+		.news .col-4:nth-of-type(2){
+			background-image: url(LatestNews2.jpg);
+		}
+		.news .col-4:nth-of-type(3){
+			background-image: url(LatestNews3.jpg);
+		}
+		.news .col-4:nth-of-type(4){
+			background-image: url(LatestNews4.jpg);
+		}
+
+		.news .box{
+			position: absolute;
+			top: 164px;
+			transition:all 0.3s;
+
+		}
+		.news h3, .news p{
+			text-shadow: 1px 1px 5px #000;
+		}
+
+		.news .col-4:hover .box{
+			top: 25%;
+		}
+		.touch{
+			padding: 100px 0;
+			background-color: rgba(0,0,0,.6);
+		}
+		.touch .col-2:nth-of-type(1){
+			background-color: #fff;
+			border-radius: 5px;
+			padding: 15px;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+		
+		 .touch h1, .touch h4{
+			text-align: center;
+			color:#fff;
+			margin-bottom: 30px;
+			padding: 20px;}
+
+		.touch h3{
+			text-align: center;
+			padding: 15px 0;
+		}
+		.touch input[type="text"],
+		.touch input[type="email"],
+		.touch input[type="number"],
+		.touch textarea{
+			width: 100%;
+			height: 30px;
+			margin: 10px 0;
+			padding: 5px;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			border:0;
+			border-bottom: 2px solid #ccc; 
+
+		}
+		.touch input[type="text"]:focus,
+		.touch input[type="email"]:focus,
+		.touch input[type="number"]:focus,
+		.touch textarea:focus{
+			outline: 0;
+			border-bottom: 2px solid #DC4B4B;
+		}
+		.touch textarea{
+			height: 100px;
+		}
+			
+			.touch input[type="submit"]{
+			width:50px;
+			font-size: 15px;
+			margin: 10px auto;
+			height: initial;
+			line-height: initial;
+		}
+
+		.touch .col-3{
+			color:#999;
+			text-align: center;
+
+		}
+
+		.touch .icon_touch{
+		font-size:30px;
+		margin-bottom: 20px
+
+
+
+
+
+		}
+		.touch p{
+			font-size: 12px;
+		}
+
+
+
+		.touch .map{
+			width:100%; 
+			height:280px;
+
+		}
+
+		.touch .map iframe{
+			width: 100%;
+			height: 100%;
+		}
+
+
+
+
+
+
+
+
+
+
+	</style>
+		
+</head>
+<body>
+	<div class="wraper">
+	<nav class="full-width clearfix">
+		<div class="fixed-width">
+			<div class="logo">FEATURE<span class="orange">D</span></div>
+			<ul>
+				<li><a href="">Home</a></li>
+				<li><a href="">Service</a></li>
+				<li><a href="">About Us</a></li>
+				<li><a href="">Team</a></li>
+				<li><a href="">Store</a></li>
+				<li><a href="">Testimonial</a></li>
+				<li><a href="">News</a></li>
+				<li><a href="">Contact Us</a></li>
+			</ul>
+		</div>
+	</nav>
+	<header class="full-width">
+
+		<div class="title">
+			<h1>Beautiful WordPress Business Theme</h1>
+			<hr>
+			<h3>Cleanly Coded With User Friendly Interface</h3>
+			<a href="">Buy Now</a>
+		</div>
+		
+		<div class="menu full-width clearfix">
+			<div class="col-3">
+				<div class="icon fa fa-asterisk fa-2x"></div>
+				<h4>Parallax Effect</h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+			</div>
+			<div class="col-3">
+				<div class="icon fa fa-shopping-cart fa-2x"></div>
+				<h4>Unlimited Options</h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+			</div>
+			<div class="col-3">
+				<div class="icon fa fa-users fa-2x"></div>
+				<h4>Responsice Design</h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+			</div></div>
+		<div class="orangeblock full-width">
+		<div class="fixed-width"></div>	
+		<div class="left">Easy to step up, just take a few steps and your website is ready within a minute</div>
+		<div class="right"><a href="">Call To Action</a>
+		</div>		
+</div>
+		<div class="what clearfix">
+			<div class="full-width">	
+		<h2>what we do </h2>
+		<h4>This Is Subtitle</h4>
+		<div class="col-3">
+			<div class="icon_what fa fa-binoculars"></div>
+			<h5>Frequently Asked Question</h5>
+			<p>Aliquam varius ligula tempor, vehicula mauris sed, efficitur dui. Aenean euismod felis quis purus varius, nec laoreet leo mollis. Curabitur eget porta velit, non convallis velit. Aenean tempor rutrum ante at vulputate</p>
+		</div>
+		<div class="col-3">
+			<div class="icon_what fa fa-binoculars"></div>
+			<h5>Free Training & Courses</h5>
+			<p>Aliquam varius ligula tempor, vehicula mauris sed, efficitur dui. Aenean euismod felis quis purus varius, nec laoreet leo mollis. Curabitur eget porta velit, non convallis velit. Aenean tempor rutrum ante at vulputate</p>
+		</div>
+		<div class="col-3">
+			<div class="icon_what fa fa-binoculars"></div>
+			<h5>Clean Code</h5>
+			<p>Aliquam varius ligula tempor, vehicula mauris sed, efficitur dui. Aenean euismod felis quis purus varius, nec laoreet leo mollis. Curabitur eget porta velit, non convallis velit. Aenean tempor rutrum ante at vulputate</p>
+		</div>
+		<div class="col-3">
+			<div class="icon_what fa fa-binoculars"></div>
+			<h5>Only Good In PayPal</h5>
+			<p>Aliquam varius ligula tempor, vehicula mauris sed, efficitur dui. Aenean euismod felis quis purus varius, nec laoreet leo mollis. Curabitur eget porta velit, non convallis velit. Aenean tempor rutrum ante at vulputate</p>
+		</div>
+		<div class="col-3">
+			<div class="icon_what fa fa-binoculars"></div>
+			<h5>Production Graph</h5>
+			<p>Aliquam varius ligula tempor, vehicula mauris sed, efficitur dui. Aenean euismod felis quis purus varius, nec laoreet leo mollis. Curabitur eget porta velit, non convallis velit. Aenean tempor rutrum ante at vulputate</p>
+		</div>
+		<div class="col-3">
+			<div class="icon_what fa fa-binoculars"></div>
+			<h5>Marketing Strategy</h5>
+			<p>Aliquam varius ligula tempor, vehicula mauris sed, efficitur dui. Aenean euismod felis quis purus varius, nec laoreet leo mollis. Curabitur eget porta velit, non convallis velit. Aenean tempor rutrum ante at vulputate</p>
+		</div>
+
+
+		</div>
+		</div>
+	</header>
+	<div class="about clearfix">
+		<div class="fixed-width">
+		<div class="col-2">
+		<h2>About Us</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus odio nesciunt harum neque deserunt deleniti nemo, explicabo id accusamus voluptatum dolor, porro eligendi possimus culpa pariatur. Omnis, dolores ad nam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus odio nesciunt harum neque deserunt deleniti nemo, explicabo id accusamus voluptatum dolor, porro eligendi possimus culpa pariatur. Omnis, dolores ad nam.</p>
+		</div>
+	<div class="col-2">
+			<img src="people-in-cafe-looking-at-city.jpg" alt="">
+		</div>
+</div>
+</div>
+	<div class="welcome">
+		<div class="fixed-width_600">
+		<p>We offer unlimited column option in our sections.Our support forum open for free users also.</p>
+		<a href="">welcome</a>
+		</div>
+
+</div>
+		<div class="team clearfix">
+			
+			<h1>Meet our Team</h1>
+			<h4>This Is Subtitle</h4>
+
+			<div class="fixed-width">
+			<div class="col-4">
+				
+			
+			<div class="name">Gabriel Labreez</div>
+			<div class="desc">Donec malesuada pellentesque eros, eu aliquam nunc scelerisque</div>
+			<div class="icon">
+				<span class="fa fa-facebook"></span>
+				<span class="fa fa-twitter"></span>
+				<span class="fa fa-instagram"></span>
+
+			</div>
+			<div class="job">Co-founder</div>
+			</div>
+			<div class="col-4">
+			<div class="name">Marie Stan</div>
+			<div class="desc">Donec malesuada pellentesque eros, eu aliquam nunc scelerisque</div>
+			<div class="icon">
+				<span class="fa fa-facebook"></span>
+				<span class="fa fa-twitter"></span>
+				<span class="fa fa-instagram"></span>
+
+			</div>
+			<div class="job">HR Manager</div>
+	</div>
+			<div class="col-4">
+			<div class="name">Marie Stan</div>
+			<div class="desc">Donec malesuada pellentesque eros, eu aliquam nunc scelerisque</div>
+			<div class="icon">
+				<span class="fa fa-facebook"></span>
+				<span class="fa fa-twitter"></span>
+				<span class="fa fa-instagram"></span>
+			</div>
+			<div class="job">Developer</div>
+
+</div>
+			<div class="col-4">
+			<div class="name">David Rasop</div>
+			<div class="desc">Donec malesuada pellentesque eros, eu aliquam nunc scelerisque</div>
+			<div class="icon">
+				<span class="fa fa-facebook"></span>
+				<span class="fa fa-twitter"></span>
+				<span class="fa fa-instagram"></span>
+
+			</div>
+			<div class="job">Support Manager</div>
+		</div>
+	</div>
+</div>
+
+
+		<div class="store clearfix">
+			<div class="fixed-width">
+				<h1>W Store</h1>
+				<h4>this is grace</h4>
+				<div class="col-3">
+					<a href="">Add To Cart</a>
+					<div class="price">NT$600</div>
+					<div class="title">絨毛寶寶連帽外套(粉)</div>
+				</div>
+				<div class="col-3">
+					<a href="">Add To Cart</a>
+					<div class="price">NT$600</div>
+					<div class="title">絨毛寶寶連帽外套</div>
+				</div>
+				<div class="col-3">
+					<a href="">Add To Cart</a>
+					<div class="price">NT$600</div>
+					<div class="title">絨毛寶寶連帽外套</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- .happy>.fixed-width>h1{Happy Customers}+h4{This Is Subtitle}+.col-3*3>.quote+img+p+.sign -->
+
+		<div class="happy clearfix">
+			<div class="fixed-width">
+
+				<h1>Happy Customers</h1>
+				<h4>This Is Subtitle</h4>
+
+				<div class="col-3">
+					<div class="quote"><span class="fa fa-camera-retro"></div>
+					<img src="01costumes.jpg" alt="">
+					<p>I develop lots of websites with a vaiety of themes….the support I have had from ThemeHunk has been first class. Very quick, good support and always ready to correct my css errors!. They have tweaked the theme for me and have been great. Great support guys</p>
+					<div class="sign">Alex</div>
+				</div>
+				<div class="col-3">
+					<div class="quote"><span class="fa fa-camera-retro"></div>
+					<img src="02costumes.jpg" alt="">
+					<p>I’m having issues with receiving a message from the contact form. I can send it successfully but I’m not receiving the test message. I was told to change my email address and it works. Thank you ThemeHunk for the great service. Excellent!</p>
+					<div class="sign">Josh</div>
+				</div>
+				<div class="col-3">
+					<div class="quote"><span class="fa fa-camera-retro"></div>
+					<img src="03costumes.jpg" alt="">
+					<p>I am a newbie to WordPress, with limited html and css experience. The Themehunk team has been there every step of the way to help me make a web site that I am truly proud of, and have helped to make me a better developer in the process.</p>
+					<div class="sign">Maria</div>
+				</div>
+			</div>
+			</div>
+			<div class="news clearfix">
+			
+				<h1>Latest News</h1>
+				<h4>This is Subtitle</h4>
+				<div class="col-4">
+				<div class="box">
+				<h3>Interview Meet</h3>
+				<p>Maecenas eget orci in purus placerat volutpat sit amet id leo. Pellentesque ultricies turpis sed</p>
+			</div>
+		</div>
+		<div class="col-4">
+			<div class="box">
+				<h3>Coffee Time</h3>
+				<p>Cras gravida suscipit sapien sed auctor. Mauris in luctus ante. Suspendisse non ullamcorper ligula.</p>
+			</div>
+		</div>
+		<div class="col-4">
+			<div class="box">
+				<h3>Business News</h3>
+				<p>Cras gravida suscipit sapien sed auctor. Mauris in luctus ante. Suspendisse non ullamcorper ligula.</p>
+			</div>
+		</div>
+		<div class="col-4">
+			<div class="box">
+				<h3>Official Meet</h3>
+				<p>Duis eget ex non metus ornare lacinia. Nulla tempus nec erat a accumsan. In euismod at diam sit</p>
+			</div>
+		</div>
+	
+</div>
+<!-- .touch>.fixed-width>h1+h4+.col-2*2 -->
+	<div class="touch clearfix">
+		<div class="fixed-width">
+			<h1>Get In Touch</h1>
+			<h4>Any question?</h4>
+			<div class="col-2">
+				<form action="">
+					<h3>Contact Us</h3>
+					<div><input type="text" placeholder="Name"></div>
+					<div><input type="email" placeholder="Email"></div>
+					<div><input type="number" placeholder="Phone"></div>
+					<div><textarea placeholder="Message"></textarea></div>
+					<input type="submit" value="送出">
+				</form>
+			</div>
+			<div class="col-2 clearfix">
+				<div class="col-3">
+					<div class="icon_touch fa fa-mobile"></div>
+					<p>+91 987654321</p>
+				</div>
+				<div class="col-3">
+					<div class="icon_touch fa fa-home"></div>
+					<p>92 Bayport Ave. South Richmond Hill, NY 11413</p>
+				</div>
+				<div class="col-3">
+					<div class="icon_touch fa fa-envelope-o"></div>
+					<p>info@themehunk.com</p>
+				</div>
+				<div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28910.955871395792!2d121.50729775428773!3d25.07241243121046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a951fdd9f7f9%3A0x7a40c3880c03a171!2z6Ie65YyX5biC56uL576O6KGT6aSo!5e0!3m2!1szh-TW!2stw!4v1514191586125" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+			</div>
+		</div>
+		</div>
+	<!-- footer>.fixed-width>.top>(.col-4*4>h5+ul>li)+.bottom>.copyright+.icon_footer -->
+	<footer>
+		<div class="fixed-width">
+			<div class="top">
+				<div class="col-4">
+					<h5>IMPORTANT LINKS</h5>
+					<ul>
+						<li>Affliates</li>
+						<li>Privacy Policy</li>
+						<li>Custom work</li>
+					</ul>
+				</div>
+				<div class="col-4">
+					<h5>RECENT POSTS</h5>
+					<ul>
+						<li>Interview Meet</li>
+						<li>Business News</li>
+						<li>Coffee Timet</li>
+					</ul>
+				</div>
+				<div class="col-4">
+					<h5>TAGS</h5>
+					<ul>
+						<li>Agency</li>
+						<li>Business</li>
+						<li>Meeting</li>
+						<li>Offici</li>
+						<li>Ontime</li>
+						<li>Relax</li>
+					</ul>
+				</div>
+				<div class="col-4">
+					<h5>ABOUT</h5>
+					<ul>
+						<li>Cras egestas lectus nec tortor cursus tristique. Maecenas id lacus quis nibh sollicitudin laoreet quis eget leo.</li>
+					</ul>
+				</div>
+			</div>
+			<div class="bottom">
+				<div class="copyright">Business onepage theme Powered by ThemeHunk</div>
+				<div class="icon_footer">
+					<span class="fa fa-facebook"></span>
+					<span class="fa fa-twitter"></span>
+					<span class="fa fa-google-plus"></span>
+					<span class="fa fa-behance"></span>
+					<span class="fa fa-pinterest-p"></span>
+				</div>
+			</div>
+		</div>
+	</footer>
+</div>
+<!-- wraper-->
+</body>
+</html>
